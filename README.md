@@ -25,8 +25,22 @@ transformer/
 
 This repository is tested on Ubuntu 24.04
 
-```shell
+
+### Environment Setup
+```bash
 conda create -n little-shakespeare python=3.10
 pip install torch torchvision torchaudio --index-url https://download.pytorch.org/whl/cu121
 pip install tokenizers tqdm accelerate
 ```
+
+### Train the Model
+```bash
+conda activate little-shakespeare
+python src/train.py
+```
+
+### Play and have fun
+```bash
+python src/inference.py
+```
+
