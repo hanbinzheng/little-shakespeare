@@ -99,4 +99,4 @@ def train(data_path=data_path, vocab_path=vocab_path,
 
 
 if __name__ == '__main__':
-    train(batch_size=256)
+    train(batch_size=256, num_epoch=2)

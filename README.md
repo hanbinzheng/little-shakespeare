@@ -28,5 +28,5 @@ This repository is tested on Ubuntu 24.04
 ```shell
 conda create -n little-shakespeare python=3.10
 pip install torch torchvision torchaudio --index-url https://download.pytorch.org/whl/cu121
-pip install tokenizers tqdm
+pip install tokenizers tqdm accelerate
 ```
