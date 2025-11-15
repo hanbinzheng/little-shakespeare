@@ -46,3 +46,26 @@ python train.py
 python inference.py
 ```
 
+### Show some result.....
+蠢蠢的还挺可爱的
+```text
+>> 我想要大姐姐
+,
+Right son of children, you shall know your son-in-law
+>> to be
+ to be
+pinched with modesty
+>> lord
+ing
+>> to be
+ I, my lord,
+>> father
+,
+And, I fear, with all my heart’s forces
+>> god
+s;
+For I have the very ballad will be very hot,
+And do all that dim and have yielded up
+To th’ volume of authority
+>>
+```
