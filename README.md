@@ -36,6 +36,7 @@ pip install tokenizers tqdm accelerate tensorboard
 ### Train the Model
 ```bash
 conda activate little-shakespeare
+mkdir checkpoint
 cd src
 python train.py
 ```
