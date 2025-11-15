@@ -16,8 +16,18 @@ STOP_TOKEN_IDS = [18, 35, 5, 65] # 18: '.', 35: '?', 5: '!', 65: ']'
 
 def load_model(model, model_savepath=model_savepath, device='cuda'):
     state_dict = torch.load(model_savepath, map_location=device, weights_only=False)
-    model.load_state_dict(state_dict)
-    model.eval()
+
+    new_state_dict = {}
+    for key, value in state_dict.items():
+        if key.startswith('_orig_mod.'):
+            new_key = key.replace('_orig_mod.', '')
+            new_state_dict[new_key] = value
+        else:
+            new_state_dict[key] = value
+
+    model.load_state_dict(new_state_dict)
+    model.to(device)
+
     return model
 
 @torch.no_grad()
@@ -114,10 +124,10 @@ if __name__ == '__main__':
     model = DecoderOnlyTransformer(
         max_seq_len=128,
         vocab_size=5000,
-        n_block=8,
+        n_block=12,
         d_embed=256,
         d_hidden=512,
-        d_ff=512,
+        d_ff=1024,
         n_head=4,
         dropout=0.1
     ).to(device)
