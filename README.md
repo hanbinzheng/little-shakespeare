@@ -19,7 +19,6 @@ transformer/
 │   ├── train.py
 │   └── inference.py
 │
-├── config.py
 └── README.md
 ```
 
@@ -46,10 +45,12 @@ python train.py
 python inference.py
 ```
 
-### Show some result.....
-蠢蠢的还挺可爱的
+### Some result.....
+
+没训好瞎训了一会儿，蠢蠢的还挺可爱的
+
 ```text
->> 我想要大姐姐
+>> hi
 ,
 Right son of children, you shall know your son-in-law
 >> to be
